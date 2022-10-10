@@ -1,0 +1,24 @@
+
+PROCEDURE permutation(VAR A,B:INTEGER)
+VAR
+	x : INTEGER;
+BEGIN
+	X := A;
+	A := B;
+	B := X;
+END
+ALGORITHM Insert
+VAR
+	i,j: INTEGER;
+	Arr : ARRAY_OF INTEGER[];
+BEGIN
+	i := 1
+	WHILE (i < Arr.lenght) DO
+    j := i;
+    WHILE (j > 0 and Arr[j-1] > Arr[j]) DO
+        permutation(Arr[j],Arr[j-1]);
+        j := j - 1;
+    END_WHILE
+    i := i + 1;
+	END_WHILE
+END;
